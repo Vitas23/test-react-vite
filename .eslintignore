@@ -1,0 +1,5 @@
+src/assets
+coverage
+cypress/support/polyfills/*
+public
+node_modules

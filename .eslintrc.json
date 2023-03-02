@@ -1,0 +1,96 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "warn",
+    "require-yield": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-useless-return": "warn",
+    "no-return-await": "warn",
+    "no-with": "error",
+    "require-await": "warn",
+    "yoda": "error",
+    "no-new": "error",
+    "no-loop-func": "error",
+    "array-callback-return": "error",
+    "dot-notation": "error",
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "no-alert": "warn",
+    "prefer-rest-params": "error",
+    "prefer-template": "warn",
+    "prefer-spread": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-const": "warn",
+    "prefer-arrow-callback": "warn",
+    "no-var": "error",
+    "no-duplicate-imports": "warn",
+    "no-useless-rename": "warn",
+    "object-shorthand": "warn",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "(useDeferredLayoutEffect)" // regex
+      }
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "testing-library/render-result-naming-convention": "off"
+  },
+  "globals": {
+    "console": false,
+    "process": false,
+    "IS_PRODUCTION": false,
+    "IS_DEVELOPMENT": false,
+    "check": true,
+    "gen": true
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    },
+    {
+      "files": ["*.spec.tsx", "*.spec.ts"],
+      "rules": {
+        "testing-library/render-result-naming-convention": "warn"
+      }
+    }
+  ]
+}
